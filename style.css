@@ -40,23 +40,25 @@ body {
     overflow-x: hidden;
 }
 
+
 #home {
-    background-image: url("images/bg1.jpg");
     background-size: cover;
+    font-family: 'Inter', sans-serif;
     background-position: center;
     background-attachment: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    padding-top: 10vh;
+    justify-content: center;
     height: 100vh;
+    padding-top: 0px;
+    box-sizing: border-box;
 }
 
 #about {
-    background-image: url("images/bg1.jpg");
     background-size: cover;
     background-position: center;
+    font-family: 'Inter', sans-serif;
     background-attachment: fixed;
     display: flex;
     flex-direction: column;
@@ -67,10 +69,10 @@ body {
 }
 
 #contact {
-    background-image: url("images/bg1.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    font-family: 'Inter', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -80,16 +82,138 @@ body {
 }
 
 #find {
-    background-image: url("images/bg1.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     display: flex;
+    font-family: 'Inter', sans-serif;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     padding-top: 10vh;
     height: 100vh;
+}
+
+#signhome {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    font-family: 'Inter', sans-serif;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 10vh;
+    height: 100vh;
+    
+}
+
+form {
+    display: block;
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid #e7e7e7;
+    border-radius: 10px;
+    width: 450px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"], select {
+    display: block;
+    width: 400px;
+    padding: 10px;
+    margin: 0 auto 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 20px;
+    width: 400px;
+    background-color: #53b658;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.5);
+    
+    
+  }
+  
+  .modal-content {
+    font-family: 'Inter', sans-serif;
+    margin: 10% auto;
+    padding: 20px;
+    width: 450px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 25px;
+    right: 15px; 
+    cursor: pointer;
+    z-index: 1000;
+    transform: rotate(0deg);
+}
+
+
+.close:hover {
+    color: black;
+}
+
+.logo-container img {
+    display: block;
+    margin: 0 auto;
+    width: 80px; 
+}
+  
+
+button:hover {
+    background-color: #45a049;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+}
+
+
+#loghome {
+   background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    font-family: 'Inter', sans-serif;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 10vh;
+    height: 100vh; 
 }
 
 .sign-home {
@@ -101,7 +225,7 @@ body {
 }
 
 .btn {
-    background: #007bff;
+    background: #AF2F33;
     color: white;
     padding: 12px 20px;
     border-radius: 25px;
@@ -111,13 +235,13 @@ body {
 }
 
 .btn:hover {
-    background: #0056b3;
+    background: #AF2F33;
 }
 
 
 h1 {
     color: #050505;
-    font-size: clamp(40px, 8vw, 80px);
+    font-size: clamp(40px, 8vw, 40px);
     font-family: 'Inter', sans-serif;
     padding: 7px;
     border-radius: 10px;
@@ -134,9 +258,43 @@ h2 {
     border-radius: 10px;
 }
 
+h3 {
+    background: #AF2F33;
+    color: white;
+    font-size: 70px;
+    font-family: 'Inter', sans-serif;
+    padding: 7px;
+    border-radius: 10px;
+}
+h5 {
+    color: #050505;
+    font-size: clamp(40px, 8vw, 40px);
+    font-weight: normal; 
+    font-family: 'Inter', sans-serif;
+    padding: 7px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h6 {
+    color: #050505;
+    font-size: clamp(2px, 8vw, 30px);
+    font-weight: normal; 
+    font-family: 'Inter', sans-serif;
+    padding: 7px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 header {
     position: sticky;
-    width: 100%;
+    width: 100.50%;
     top: 0;
     background: #AF2F33;
     color: white;
@@ -197,10 +355,11 @@ nav ul li a.active {
 }
 
 .find-blood-btn {
-    color: white;
-    padding: 12px 18px;
+    color: #AF2F33;
+    background-color: white;
+    padding: 10px 18px;
     font-size: clamp(14px, 2vw, 18px);
-    border: none;
+    border: 0;
     border-radius: 50px;
     font-weight: bold;
     cursor: pointer;
@@ -209,8 +368,10 @@ nav ul li a.active {
 }
 
 .find-blood-btn:hover {
-    background-color: white;
-    color: #AF2F33;
+    background-color: #AF2F33;
+    padding: 10px 18px;
+    border-radius: 50px;
+    color: white;
 }
 
 .slideshow-container {
@@ -263,6 +424,116 @@ nav ul li a.active {
     margin-top: 10px;
 }
 
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+    max-width: 1500px;
+    margin: 0 auto;
+    margin-left: -70px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 10px;
+}
+
+.contact-item {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-left: 5px solid #AF2F33;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    font-family: 'Inter', sans-serif;
+}
+
+.contact-item h3 {
+    font-size: 18px;
+    color: #AF2F33;
+    margin-bottom: 10px;
+}
+
+.contact-item p {
+    font-size: 14px;
+    color: #333;
+    margin: 5px 0;
+}
+
+footer {
+    background-color: #AF2F33;
+    color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+    padding: 40px 0;
+    text-align: center;
+    width: 100vw;
+
+}
+
+.contact-footer-wrapper {
+    width: 100%;
+    background-color: #AF2F33;
+    padding: 40px 5%;
+    margin-top: auto;
+  }
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.footer-left,
+.footer-right {
+    flex: 1 1 45%;
+    min-width: 300px;
+    margin-bottom: 20px;
+}
+
+.footer-left h3,
+.footer-right h4 {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.footer-left p {
+    font-size: 14px;
+    margin: 8px 0;
+    color: #ccc;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+    justify-content: center;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    transition: 0.3s;
+}
+
+.social-icons img:hover {
+    opacity: 0.8;
+}
+
+
+.app-link {
+    display: block;
+    margin-top: 10px;
+    color: #ccc;
+    text-decoration: underline;
+    font-size: 14px;
+}
+
+
+
+
  @media (max-width: 1024px) {
     nav ul{
         gap: 30px;
@@ -314,10 +585,12 @@ nav ul li a.active {
     
     h1 {
         font-size: 20px;
+        font-family: 'Inter', sans-serif;
     }
 
     h2 {
         font-size: 14px;
+        font-family: 'Inter', sans-serif;
     }
 
     .slide {
@@ -333,73 +606,5 @@ nav ul li a.active {
         font-size: 14px;
         padding: 6px 10px;
     }
-
-/* Add these new styles for auth pages */
-.auth-section {
-    min-height: 80vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-}
-
-.auth-form {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    padding: 30px;
-    border-radius: 10px;
-    width: 100%;
-    max-width: 400px;
-    margin-top: 20px;
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group input {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 5px;
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
-    font-size: 16px;
-}
-
-.form-group input::placeholder {
-    color: rgba(255, 255, 255, 0.7);
-}
-
-.auth-form .btn {
-    width: 100%;
-    padding: 12px;
-    background: #ff4b4b;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background 0.3s ease;
-}
-
-.auth-form .btn:hover {
-    background: #ff3333;
-}
-
-.auth-link {
-    text-align: center;
-    margin-top: 20px;
-    color: white;
-}
-
-.auth-link a {
-    color: #ff4b4b;
-    text-decoration: none;
-}
-
-.auth-link a:hover {
-    text-decoration: underline;
-}
+    
 }
